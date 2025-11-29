@@ -1,0 +1,105 @@
+version: 1
+project:
+  title: Econometrics Laboratory
+  github: https://github.com/berkeley-eml/quarto-site
+  keywords: []
+  abbreviations: {}
+  plugins:
+    - listing.mjs
+  toc:
+    - file: index.md
+    - file: services.md
+      hidden: true
+    - file: contact.md
+      hidden: true
+    - title: About
+      children:
+        - file: history.md
+        - file: availability.md
+    - title: Accounts
+      children:
+        - file: accounts.md
+        - file: account-types.md
+        - file: passwords.md
+        - file: security.md
+        - title: Policies and Rules
+          children:
+            - file: eligibility.md
+            - file: lab-rules.md
+            - file: restrictions.md
+            - file: rules-policies.md
+            - file: rules.md
+            - file: server_rules.md
+            - file: copyright.md
+        - file: homepage.md
+        - file: ergonomics.md
+    - title: Remote Access
+      children:
+        - file: monitoring.md
+        - file: jupyterhub.md
+        - title: Secure Shell
+          children:
+            - file: ssh.md
+            - file: ssh-keys.md
+            - file: ssh-agent.md
+            - file: ssh-tunnel.md
+            - file: putty.md
+        - title: File Transfer
+          children:
+            - file: sftp-scp.md
+            - file: globus.md
+            - file: rclone.md
+            - file: mount-home.md
+        - file: rdp.md
+        - file: vpn.md
+        - file: x2go.md
+        - file: x-windows.md
+    - title: Cluster
+      children:
+        - file: hardware.md
+        - file: cluster.md
+        - title: Login/Standalone Servers
+          children:
+            - file: servers.md
+            - file: compute-servers-policy.md
+            - file: background.md
+            - file: unix-processes.md
+        - file: grafana.md
+        - file: memory.md
+        - file: savio.md
+    - title: Data and Storage
+      children:
+        - file: disk-quota.md
+        - file: disk-space.md
+        - file: file-permissions.md
+        - file: tape-backups.md
+    - title: Software
+      children:
+        - file: software.md
+        - file: python-packages.md
+        - file: r-libraries.md
+        - file: terminate-r.md
+        - file: julia-packages.md
+        - file: tensorflow.md
+        - file: ucthesis.md
+    - file: motd.md
+      children:
+        - pattern: motd/*.md
+          hidden: true
+  
+site:
+  template: book-theme
+  title: Econometrics Laboratory
+  options:
+    logo: images/EML_logo_small.png
+    favicon: images/B-favicon.png
+    #logo_text: Econometrics Laboratory
+    style: _static/custom.css
+    folders: true
+  nav:
+    - title: Home
+      url: /index
+    - title: Services
+      url: /services
+    - title: Contact
+      url: /contact

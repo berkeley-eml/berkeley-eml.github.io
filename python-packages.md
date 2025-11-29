@@ -1,0 +1,94 @@
+---
+title: Python Packages
+---
+
+
+We provide Python including a variety of packages (including numpy,
+scipy, pandas, scikit-learn, and other computational packages) through
+the Anaconda distribution.
+
+On our Linux servers Python 3.12 is the default as of June 2024. We
+also have Python 3.11 available.
+
+## Packages
+
+To see what Python packages are available, invoke
+
+```bash
+conda list
+```
+
+To install packages locally in your home directory use the `--user`
+flag to `pip`:
+
+```bash
+pip install --user package_to_install
+```
+
+It is possible to install packages using `conda`, but we don't
+recommend it as `conda` can cause confusing interference between
+dependencies.
+
+### virtualenv and Conda environments
+
+If you would like to override system-installed libraries, for example if
+you want to use a newer or older version, try
+[virtualenv](https://virtualenv.pypa.io/en/stable/), "a tool to create
+isolated Python environments".
+
+```bash
+virtualenv --system-site-packages ~/path/for/your/env
+source ~/path/for/your/env/bin/activate
+```
+
+At this point you can `pip install` your library or do something more
+involved:
+
+```bash
+git clone https://github.com/somerepo/somelibrary.git
+cd somelibrary
+python setup.py install
+# optionally, to delete source files
+cd .. && rm -rf somelibrary
+```
+
+When you want to escape out of this environment, run `deactivate`. To
+re-enter, run the `source` line as above.
+
+Alternatively you can use Conda to create environments:
+
+```bash
+conda create --name myenv
+source activate myenv
+```
+
+To escape out of this environment, run `source deactivate`.
+
+## Switch Versions
+
+You can use Linux environment modules to switch between
+different Python versions. This can be done on a one-time basis in a
+given terminal session or cluster submission script, or can be done in
+your .bashrc (after the stanza involving ~skel/std.bashrc) to set a
+default different than the system default.
+
+To switch from Python 3.x to Python 3.y:
+
+```bash
+module switch python/3.x python/3.y
+```
+
+To see what Python is being used (if nothing is listed here then the
+default machine Python with very few packages will be used):
+
+```bash
+module list
+```
+
+If no Python is listed you can use
+
+```bash
+module load python
+```
+
+in this case to load the default Python.

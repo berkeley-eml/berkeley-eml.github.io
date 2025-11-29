@@ -1,0 +1,25 @@
+---
+title: Login Servers
+---
+
+
+This is a partial list of EML servers (with the memory available on the
+machines in parentheses). Some have access restrictions.
+
+You can also browse a list of EML computers on the General overview of
+our [dashboards](monitoring.md).
+
+ - `fargo.berkeley.edu` (376 GB)
+ - `iia.berkeley.edu` (125 GB)
+ - `jorgenson.berkeley.edu` (188 GB)
+ - `klein.berkeley.edu` (754 GB)
+ - `laffont.berkeley.edu` (94 GB)
+ - `logit.berkeley.edu` (15 GB)
+ - `quesnay.berkeley.edu` (251 GB)
+ - `radner.berkeley.edu` (31 GB)
+ - `theil.berkeley.edu` (125 GB)
+
+These are shared machines and CPU and memory use of user jobs is not
+restricted by the system. This means that other jobs running on a
+machine could prevent your job from getting the memory it needs and lead
+to an out of memory error. 

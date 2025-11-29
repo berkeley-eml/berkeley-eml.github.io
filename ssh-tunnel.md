@@ -1,0 +1,108 @@
+---
+title: SSH Tunneling
+---
+
+An SSH tunnel establishes a connection between your local machine and
+the remote machine via a TCP port. When you configure your local
+application to use an SSH tunnel you tell it to connect to your local
+machine at a specified port, rather than the remote machine. The tunnel
+then carries your traffic securely to the remote machine.
+
+## Typical Configurations
+
+Here is a list of application-specific tunnel settings. Note that in
+order to bind to ports lower than 1024 on Linux and Mac, one must have
+administrative privileges.
+
+
+| Application | Type | Listen Port |
+| --- | --- | --- |
+| SMB | TCP | 139 |
+| SMB | TCP | 445 |
+| Printing | TCP | 515 |
+| Remote Desktop | TCP | 3389 |
+| MySQL | TCP | 3306 |
+| VNC | TCP | 5901 |
+| JSTOR | TCP | 8000 |
+
+: Tunnel Settings
+
+## In Windows - putty
+
+1.  Click the plus sign by the `SSH` menu choice in the left pane of the
+    main window.
+
+2.  Click on **Tunnels**.
+
+3.  Set `Source port` to the value of the `listen port` and
+    `Destination` to `DESTINATION_HOST:DESTINATION_PORT` given your
+    specific tunneling options. (see table above)
+
+4.  Once the information is in place, click the **Add** button to create
+    the tunnel.
+
+5.  Click on the **Session** menu choice at the top of the left hand
+    pane and enter any valid EML host in the `Host Name` window. Click
+    on **Open**, and log in with your EML username and password.
+
+6.  If you are using an Remote Desktop application, under computername,
+    type localhost:53389
+
+## macOS and Linux
+
+Type (on your local machine) in a terminal window:
+
+```bash
+ssh -l username -L LISTEN_PORT:eml.berkeley.edu:DESTINATION_PORT EML_HOSTNAME
+```
+
+where `LISTEN_PORT` is the Listen Port, `DESTINATION_PORT` is the
+Destination Port, and `EML_HOSTNAME` is any EML computer. See our
+[dashboards](monitoring.md) for a list of EML computers.
+
+You may included more than one tunnel on the command-line, for example:
+
+```bash
+ssh -l username -L 25:DESTINATION_HOST:25 -L 110:DESTINATION_HOST:110 EML_HOSTNAME
+```
+
+### Alternative Ports
+
+If you receive a message that the port is in use or are denied
+permission, you will need to choose a different port number for the
+local port. For example you would specify port 5445 rather than 445 as
+in the example below.
+
+## Examples
+
+### SMB
+
+Connect to the EML file server from off campus:
+
+```bash
+ssh -L 5445:eml.berkeley.edu:445 username@EML_HOSTNAME
+```
+
+and then connect your SMB client to smb://localhost:5445/homes (or
+\\localhost:5445\homes on Windows).
+
+### JSTOR
+
+Read JSTOR from off campus:
+
+```bash
+ssh -L 8000:www.jstor.org:80 username@EML_HOSTNAME
+```
+
+and then connect your web browser to http://localhost:8000.
+
+### Remote Desktop
+
+Connect to an EML server through the VPN:
+
+```bash
+ssh -L 53389:localhost:3389 username@EML_HOSTNAME
+```
+
+and then connect your RDP client (e.g. Microsoft Remote Desktop) to
+localhost:53389.

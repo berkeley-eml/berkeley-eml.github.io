@@ -1,0 +1,47 @@
+---
+title: Hardware
+---
+
+
+## Servers
+
+The EML supports ten linux [compute servers](servers.md). The compute
+servers processing units vary from 8-80 and the memory on each vary from
+6 GB to 754 GB. A complete list is available at our [Grafana
+dashboards](monitoring.md) which are only available to EML users. The
+operating system for the compute servers is Ubuntu.
+
+## Computing Cluster
+
+The EML also has a [high performance computing cluster](cluster.md), containing twelve
+nodes (eight nodes containing 32 CPU cores, four nodes containing 56 CPU
+cores each, and four nodes containing ) available for compute jobs. Four
+nodes have 264 GB dedicated RAM, four nodes have 132 GB dedicated RAM,
+and four nodes have 768 GB dedicated RAM. It is managed by the Slurm
+queueing software. Slurm provides a standard batch queueing system
+through which users submit jobs to the cluster. Jobs are typically
+submitted to Slurm via a user's shell script which executes one's
+application code. Users may also query the cluster to see job status.
+All software running on EML Linux machines and compute servers are also
+available on the cluster. Users can also compile programs on any EML
+Linux machine and then run that program on the [cluster](cluster.md).
+
+## GPU
+
+The EML provides a GPU (an Nvidia A40 with 46 GB GPU memory), with
+associated software (CUDA, CuDNN, Tensorflow, Pytorch), available
+through the 'gpu' partition on the [cluster](cluster.md).
+
+## Condo Node at Savio
+
+EML users may access the EML condo, the high-performance
+computational cluster managed by the Berkeley Research Computing (BRC)
+program. This allows EML users to run jobs with priority access to two
+nodes. These nodes are quite old and won't have high performance, but they are available, and in addition, because of the condo, users are entitled to use the extra resource available on the
+Savio cluster through a low priority QoS. More information is available
+at the [Savio
+website](http://research-it.berkeley.edu/services/high-performance-computing).
+
+## EML Lab (616 Evans)
+
+The EML supports a lab with public Apple desktop computers and two network printers.

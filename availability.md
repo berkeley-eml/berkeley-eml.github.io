@@ -1,0 +1,39 @@
+---
+title: Availability
+---
+
+
+## Normal Hours
+
+The EML is normally available 24/7. Our systems are remotely accessible during all hours.
+
+We periodically perform maintenance activities which requires taking some systems offline. We also need to respond to campus Facilities events -- such as power or cooling activities. In those cases we may need to take all systems down.
+
+## Scheduled Downtimes
+
+Every attempt will be made to schedule downtimes during off hours.
+
+Scheduled system downtime is posted on this website and in the ssh login
+message. We will attempt to post the message at least 24 hours in advance. The
+announcement will state the date(s) and time(s) of the downtime and every
+attempt will be made not to exceed the posted downtime hours. Whenever
+possible, 10 minutes warning will be given prior to shutting the system down.
+
+## Unscheduled Downtimes
+
+All systems will be taken down under the following circumstances:
+
+ -  Emergency hardware or software conditions may occur, including
+    emergency filesystem repair, which may result in unscheduled system
+    downtime. As much advance warning as possible will be given; but at
+    times the system must be taken down rapidly to avoid further damage
+    to hardware or other system resources.
+
+ -  If it is transparent to all users (which in practice means that
+    there are no users on the system and no user background jobs
+    running) the system may be taken down (for no more than 30 minutes)
+    without advance message of the day warning.
+
+ -  The machines usually can reboot themselves from a crash, but
+    occasionally the system will be unavailable until a qualified person
+    can be reached.

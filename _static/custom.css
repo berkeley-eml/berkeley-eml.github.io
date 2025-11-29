@@ -1,0 +1,14 @@
+/* Custom styles for Berkeley EML site */
+
+/* Add margin at top of article content when title block is hidden */
+#skip-to-article + figure {
+    margin-top: 2rem;
+}
+
+/* Also target figures right after skip-to-article */
+figure.fig-figure.no-margin-bottom {
+    margin-top: 2rem !important;
+}
+
+
+

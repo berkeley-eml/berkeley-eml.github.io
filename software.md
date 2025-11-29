@@ -1,0 +1,73 @@
+---
+title: Software Inventory
+---
+
+
+## Operating Systems and Applications Software
+
+Ubuntu Linux on all servers and workstations
+
+## Statistics, Econometrics, and Machine Learning
+
+ - Stata and Stata MP (xstata/xstata-mp)
+ - R
+ - Python
+ - Julia
+ - SAS
+ - Tensorflow
+ - PyTorch
+ - Gauss
+ - TSP (Available only for download)
+
+## Mathematics
+
+ - MATLAB
+ - Mathematica
+ - Octave
+ - matElike
+ - Ipopt
+ - Maple
+ - OpenBLAS
+ - IBM CPLEX Solver for Matlab
+
+## Tools and Utilities
+
+ - NAG (Numerical Algorithms Group Library)
+ - IMSL Fortran Numerical Library
+ - StatTransfer
+
+## Compilers
+
+ - GNU: gcc, g++, gfortran
+ - Intel: icc, ifort
+
+## Programming/Scripting
+
+ - C
+ - C++
+ - Python
+ - R
+ - Fortran
+ - Julia
+ - Perl
+
+## Text Editing and Document Preparation
+
+ - vi
+ - Emacs
+ - pico
+ - TeX, LaTeX, LaTeX2e
+ - kate
+ - Lyx
+
+## Office Applications
+
+ - Microsoft Office (only on lab Macs)
+ - Libre Office
+
+## Other Applications
+
+ - dynare++
+ - 7zip
+ - Aspera Connect
+ - Pdftk

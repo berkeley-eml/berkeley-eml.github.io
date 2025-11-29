@@ -1,0 +1,83 @@
+---
+title: Accounts
+---
+
+## Get an Account
+
+Fill in the EML application form
+
+- [Those with Calnet ID](https://eml.berkeley.edu/account)
+- [Those without Calnet ID](https://docs.google.com/a/berkeley.edu/forms/d/1loDJ_f7pX8ZefIDqDFZNXSqBWyCKQ1QjL10aUj3cJTs)
+- [Research Project Account](forms/projectapp.pdf)
+
+Read the [EML rules](rules.md), the [UC Berkeley computer use
+policies](http://cio.berkeley.edu/policies.html), and all accompanying
+guidelines that accompany the application form.
+
+Obtain a faculty signature (if you are a graduate student), or a
+principal investigator's signature for research project accounts, and
+the EML manager's signature (643 Evans Hall).
+
+Sign the project account application form stating that you have read the
+rules, you understand them, and you will comply with them.
+
+Take the project account application form to 643 Evans to establish your
+login name and your password.
+
+You will receive an e-mail confirming your account has been set up.
+
+## Initial Disk Space
+
+The allocation of disk space on all accounts is controlled by disk
+quotas. Below are the default allocations for home directories:
+
+ - Graduate students: 5 GB
+ - Faculty: 5 GB
+ - Staff: 1 GB
+ - Visiting Faculty: 1 GB
+ - Guest Accounts: 1 GB
+
+Monitor your [disk quota](disk-quota.md) to ensure proper functioning of your
+account.
+
+If more disk space is required, users can request additional space by
+providing written justification to the EML manager. It is expected that
+requests for increased disk allocation come after basic account
+maintenance: deletion of files in trash, removal of obsolete data,
+archiving or compressing of no longer used files, and so forth.
+
+All users have access to additional [temporary disk space](temp-space.md) on
+the EML system.
+
+Users are recommended to store critical files and confidential files
+safely in personal accounts, and use the unix file permissions to make
+these files secure and private (see `man chmod`). Delete any old files
+that are no longer needed or that can be easily re-created. Compress
+large files. The command `bigfiles` will show you your biggest files
+when invoked in your current working directory.
+
+## Account Duration
+
+Accounts must be renewed according to the following schedule:
+
+ - Class accounts expire at the end of each semester and cannot be
+   renewed.
+ - Graduate accounts for Economics students are valid as long as the
+   individual is currently enrolled (registered)
+ - Alumni accounts are issued upon request to individuals who have left
+   the Department in good standing and are valid for up to two months
+   after separation from the Department if reasonable cause can be
+   demonstrated. Alumni accounts cannot be renewed.
+ - All other student accounts expire on January 1 and July 1 of each
+   year and must be renewed.
+ - Guest accounts must be renewed each year by July 1 and require
+   approval of the sponsoring faculty member.
+ - Faculty and visitor (associate research fellows) accounts expire
+   upon termination of their appointments.
+ - Contractor accounts are valid indefinitely, as long as the account
+   is in good standing.
+ - All other accounts expire on July 1 of each year and must be
+   renewed.
+
+Requests for extension of an account must be received within 5 days of the
+account expiration date. Contact manager@econ.berkeley.edu.

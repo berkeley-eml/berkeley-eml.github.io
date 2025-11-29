@@ -1,0 +1,30 @@
+---
+title: Memory Management
+---
+
+
+## Why might my job run out of memory?
+
+The EML is set up to allow multiple jobs (from one or more users) to run
+at the same time on each of the nodes in the EML cluster and on the
+standalone Linux servers. In addition we don't require that users
+specify how much memory their job will need, in part because users often
+don't know this (or don't know in advance of running the job). This
+sharing of machines without limiting memory usage by jobs allows more
+jobs to run, but it can mean that if multiple jobs that use a lot of
+memory end up on the same machine, a job can fail because it runs out of
+memory. This can occur even for jobs that don't use a lot of memory,
+because of the memory use by other jobs on the same machine.
+
+## How can I get my large-memory job to run?
+
+Users whose jobs die because memory is not available have a few options.
+
+To run a large-memory job on the cluster see [this guidance](cluster.qmd#submitting-large-memory-jobs).
+
+To run a large-memory job on a standalone server, users have a few options
+First they can wait until the large-memory jobs on a machine end or they
+can start their job again on a different machine. We maintain a [list
+of standalone servers with their memory](servers.md) and also document the
+memory available on the [cluster nodes](cluster.md).
+

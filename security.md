@@ -1,0 +1,34 @@
+---
+title: Security Issues and Policies
+---
+
+
+The Econometrics Laboratory is a shared resource, and is subject to
+strict security procedures to protect the integrity of the system for
+all its users.
+
+-   Do not give your password to anyone.
+-   Do not write your password down where it can be seen.
+-   Do not let anyone look over your shoulder when you log in.
+-   Always logout properly when you leave a workstation.
+-   Pay attention to your directory and file permissions.
+-   Change your password frequently.
+-   If you suspect someone's been using your account, report it
+    immediately to trouble@econ.berkeley.edu.
+
+Users should also be aware that electronic files stored on disk in an
+individual's account, a shared project account, or a system partition
+are not personal property, regardless of content, intended use at the
+time of creation, or purpose. Appropriate use of University of
+California facilities and infrastructure is defined in policies and
+guidelines posted on University of California web sites.
+
+As such the Econometrics Laboratory (EML) reserve the right to review,
+modify, or delete any file or terminate any activity that may interfere
+with the operations of the EML's computing facility. The EML will comply
+with prevailing University of California systemwide and Berkeley campus
+policies and guidelines governing the security and appropriate use of
+electronic and network resources. Further, the EMLwill comply with
+prevailing University of California systemwide and Berkeley campus
+policies and guidelines governing use of electronic and network
+resources and an individual's right to privacy.

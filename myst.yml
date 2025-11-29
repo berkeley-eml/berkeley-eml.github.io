@@ -98,7 +98,7 @@ site:
     folders: true
   nav:
     - title: Home
-      url: /index
+      url: "https://eml.berkeley.edu"
     - title: Services
       url: /services
     - title: Contact

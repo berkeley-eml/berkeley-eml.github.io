@@ -11,9 +11,9 @@ shell prompts you again and you can run other commands at the same time
 that the background process is running. To run the program `myprog`
 in background, type:
 
-```bash
+:::{code} shell-session
 myprog &
-```
+:::
 
 The shell will respond with a number, its process identification number
 (or PID) and then return to the prompt.
@@ -22,28 +22,28 @@ It is also possible to leave a big job running in the background even
 after you logout. To keep the program `myprog` running in
 background, type:
 
-```bash
+:::{code} shell-session
 nohup myprog &
-```
+:::
 
 For example, to run your `R` job in the background from tcsh with a
 nice level of 19:
 
-```bash
+:::{code} shell-session
 nohup nice +19 R --slave < infile.R &
-```
+:::
 
 Or from bash:
 
-```bash
+:::{code} shell-session
 nohup nice -19 R --slave < in.R > R.out 2>&1 &
-```
+:::
 
 Or `MATLAB` from tcsh, while running it with a nice level of 19:
 
-```bash
+:::{code} shell-session
 nohup nice +19 matlab < infile.m > outfile &
-```
+:::
 
 ## screen
 

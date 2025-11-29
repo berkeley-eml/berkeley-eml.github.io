@@ -51,7 +51,7 @@ remotehost**'.
 
 Here is an example login:
 
-```bash
+:::{code} shell-session
 $ ssh eml_user@iia.berkeley.edu
 The authenticity of host 'iia.berkeley.edu' can't be established.
 RSA key fingerprint is xx:yy...
@@ -60,7 +60,7 @@ Warning: Permanently added 'iia.berkeley.edu' (RSA) to the list of known hosts.
 eml_user@iia.berkeley.edu's password:  
 You have mail.
 ...
-```
+:::
 
 Whenever SSH connects to another computer, it receives a digital
 fingerprint of that computer. If you are connecting to a computer for

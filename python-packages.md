@@ -14,16 +14,16 @@ also have Python 3.11 available.
 
 To see what Python packages are available, invoke
 
-```bash
+:::{code} shell-session
 conda list
-```
+:::
 
 To install packages locally in your home directory use the `--user`
 flag to `pip`:
 
-```bash
+:::{code} shell-session
 pip install --user package_to_install
-```
+:::
 
 It is possible to install packages using `conda`, but we don't
 recommend it as `conda` can cause confusing interference between
@@ -36,31 +36,31 @@ you want to use a newer or older version, try
 [virtualenv](https://virtualenv.pypa.io/en/stable/), "a tool to create
 isolated Python environments".
 
-```bash
+:::{code} bash
 virtualenv --system-site-packages ~/path/for/your/env
 source ~/path/for/your/env/bin/activate
-```
+:::
 
 At this point you can `pip install` your library or do something more
 involved:
 
-```bash
+:::{code} bash
 git clone https://github.com/somerepo/somelibrary.git
 cd somelibrary
 python setup.py install
 # optionally, to delete source files
 cd .. && rm -rf somelibrary
-```
+:::
 
 When you want to escape out of this environment, run `deactivate`. To
 re-enter, run the `source` line as above.
 
 Alternatively you can use Conda to create environments:
 
-```bash
+:::{code} bash
 conda create --name myenv
 source activate myenv
-```
+:::
 
 To escape out of this environment, run `source deactivate`.
 
@@ -74,21 +74,21 @@ default different than the system default.
 
 To switch from Python 3.x to Python 3.y:
 
-```bash
+:::{code} shell-session
 module switch python/3.x python/3.y
-```
+:::
 
 To see what Python is being used (if nothing is listed here then the
 default machine Python with very few packages will be used):
 
-```bash
+:::{code} shell-session
 module list
-```
+:::
 
 If no Python is listed you can use
 
-```bash
+:::{code} shell-session
 module load python
-```
+:::
 
 in this case to load the default Python.

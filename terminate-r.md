@@ -17,9 +17,9 @@ If you want your R job to keep running after you log out, the best way
 to run R is through the BATCH command, i.e. run a command like this one
 at the UNIX prompt:
 
-```bash
+:::{code} shell-session
 R CMD BATCH cmds.r output.txt &
-```
+:::
 
 where "cmds.r" is a file containing the R commands that you wish to run,
 and output.txt is the file where R will write its output. Type
@@ -39,12 +39,12 @@ problem, as R will know the disposition of your data space before the
 program is completed. In other words, instead of just typing `R` at the
 UNIX prompt, type
 
-```bash
+:::{code} shell-session
 R --save
-```
+:::
 
 or
 
-```bash
+:::{code} shell-session
 R --no-save
-```
+:::

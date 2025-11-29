@@ -19,7 +19,7 @@ In this listing, Dropbox is #13, however that may change as `rclone` adds or rem
 
 In a terminal window:
 
-```bash
+:::{code} shell-session
    eml:~$ rclone config
    n) New remote
    s) Set configuration password
@@ -47,7 +47,7 @@ In a terminal window:
    For this to work, you will need rclone available on a machine that has a web browser available.
    Execute the following on your machine:
        rclone authorize "dropbox"
-```
+:::
 
 At this point you would run \`rclone authorize dropbox\` on a machine
 with rclone installed and which can display a web browser. For example
@@ -58,7 +58,7 @@ you log into your dropbox account and permit rclone to access files.
 rclone will then print a long string. Copy that string and pasted it
 into the first terminal.
 
-```bash
+:::{code} shell-session
    result> {"access_token":"abc1234...","token_type":"bearer","expiry":"0001-01-01T00:00:00Z"}
    --------------------
    [dropbox]
@@ -83,22 +83,22 @@ into the first terminal.
    s) Set configuration password
    q) Quit config
    e/n/d/r/c/s/q> q
-```
+:::
 
 ### Using rclone
 
 Test your configuration by listing the files in your Dropbox:
 
-```bash
+:::{code} shell-session
 eml:~$ rclone ls dropbox:
-```
+:::
 
 Sync a file/directory to/from dropbox:
 
-```bash
+:::{code} shell-session
 eml:~$ rclone sync dropbox:path-to-file-or-folder ~/place/i/want/to/sync/to/
 eml:~$ rclone sync some/dir/on/eml dropbox:
-```
+:::
 
 Since *rclone sync* can drastically change the contents of the
 destination location, you may want to append the --dry-run option to

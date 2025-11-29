@@ -60,7 +60,7 @@ See the UNIX instructions for this step below as they are identical.
 
 You can generate keys with `ssh-keygen`:
 
-```bash
+:::{code} shell-session
 % ssh-keygen -t ed25519
 Generating public/private ed25519 key pair.
 Enter file in which to save the key ($HOME/.ssh/id_ed25519):    
@@ -68,7 +68,7 @@ Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
 Your identification has been saved in $HOME/.ssh/id_ed25519.
 Your public key has been saved in $HOME/.ssh/id_ed25519.pub.
-```
+:::
 
 ### Uploading the public key
 
@@ -79,16 +79,16 @@ into a new file. The public key file is actually just a text file. Upload the
 file to anyplace in the top-level of your home directory.
 
 To transfer the file to the remote machine using SCP, execute:
-```bash
+:::{code} shell-session
 scp ~/.ssh/id_ed25519.pub username@remotehost:mynewkey.pub
-```
+:::
 
 ### Installing the public key
 
 Append the public key to `~/.ssh/authorized_keys` on the remote machine.
 SSH to that computer and run:
 
-```bash
+:::{code} shell-session
 $ cat ~/mynewkey.pub >> ~/.ssh/authorized_keys
 $ rm ~/mynewkey.pub
-```
+:::

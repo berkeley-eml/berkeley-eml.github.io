@@ -10,17 +10,17 @@ process I.D., and the amount of CPU time it has consumed so far.
 
 1.  To display information about a specific user's processes:
 
-```bash
+:::{code} shell-session
 ps -U USERNAME
-```
+:::
 
 where USERNAME is your username
 
 2.  To display information about a specific running program:
 
-```bash
+:::{code} shell-session
 ps -ef | grep PROGRAM
-```
+:::
 
 where PROGRAM is the program's name
 
@@ -30,23 +30,23 @@ See `man ps` for additional information.
 
 To kill a running program, type:
 
-```bash
+:::{code} shell-session
 kill PID
-```
+:::
 
 where PID is the process I.D. obtained by running `ps`.
 
 If the first form does not kill your process, try
 
-```bash
+:::{code} shell-session
 kill -9 PID
-```
+:::
 
 To kill all your background processes, execute:
 
-```bash
+:::{code} shell-session
 kill 0
-```
+:::
 
 ## Input and Output
 
@@ -62,9 +62,9 @@ and output for the program by using the shell operators: &lt;, &gt;,
 It is recommended that you redirect standard output and standard error
 to a log file for all programs run in the background. For example:
 
-```bash
+:::{code} shell-session
 myprog >& logfile &
-```
+:::
 
 will run `myprog` in the background, redirecting all output to the
 file '`logfile`' in the current directory. See `man bash` for details
@@ -137,9 +137,9 @@ inconveniencing all users, everyone must follow certain procedures.
 For example, suppose one wanted to run Matlab in the background with
 nice value of 19:
 
-```bash
+:::{code} shell-session
 % nice +19 matlab &
-```
+:::
 
 For more information on these commands, see "man nice" (but note that
 where the manual says "nice -10" the C shell requires "nice +10". Each
@@ -150,9 +150,9 @@ any process which is slowing the system down.
 If you need to nice a process while it is running, look up the PID as
 described above and run:
 
-```bash
+:::{code} shell-session
 % renice +19 PID
-```
+:::
 
 ### Memory Usage
 
@@ -165,9 +165,9 @@ is most likely computer memory. The first step is to lift the default
 restriction on the use of memory which is imposed by the shell, by
 typing the command:
 
-```bash
+:::{code} shell-session
 limit datasize unlimited
-```
+:::
 
 at the UNIX command prompt, before you run the program which is failing
 to obtain the required memory. If the problem persists, in general your
@@ -191,9 +191,9 @@ Two common questions when running big jobs are "How do I find out the
 running time?" and "How do I capture the program output which would
 normally go to the screen?". Here is one simple way to do both (as:
 
-```bash
+:::{code} shell-session
 % nice +18 /usr/bin/time program-name >& ouput-filename
-```
+:::
 
 Where program-name is the name of your program and ouput-filename is the
 name of the file in which you want to capture output. The running time
@@ -213,15 +213,15 @@ must run several jobs in background, run them sequentially, not
 simultaneously. If your programs are 'prog1', 'prog2' and 'prog3', run
 them in background via the shell command:
 
-```bash
+:::{code} bash
 (prog1 ; prog2 ; prog3) >& log &
-```
+:::
 
 Another way is to use a semicolon:
 
-```bash
+:::{code} bash
 run1 >& run1.log ; run2 >& run2.log
-```
+:::
 
 where run1 and run2 are the programs you wish to run and run1.log and
 run2.log are the logfiles.
@@ -238,21 +238,21 @@ output into run1.log.
 
 Then from the unix prompt:
 
-```bash
+:::{code} shell-session
 % chmod +x run_all
-```
+:::
 
 to allow the script to be executable, and then type:
 
-```bash
+:::{code} bash
 ./run_all
-```
+:::
 
 to run the script. You could also type:
 
-```bash
+:::{code} bash
 ./run_all &
-```
+:::
 
 to have it run in the background.
 
@@ -271,15 +271,15 @@ To use `at` or `batch`, create a script file which contains the
 unix commands you want to run. Suppose your script file is called
 'filename'. To run it in batch, type the command:
 
-```bash
+:::{code} shell-session
 batch filename
-```
+:::
 
 To run the script at a specific time, use:
 
-```bash
+:::{code} shell-session
 at time date filename
-```
+:::
 
 where time is in the form `0815`, `0815am`, `8:15am`, `now`, and `5 pm`;
 and date is in the form `Jan 24`, `Friday`, `tomorrow`, and `today`.
@@ -288,9 +288,9 @@ If you leave out the date field, the date will default to `today`.
 
 The computer will respond:
 
-```bash
+:::{code} bash
 job N at <full date>
-```
+:::
 
 where 'N' is the job number it creates. When the job finishes, it will
 mail you the output of the script, unless output was redirected. (see
@@ -319,16 +319,16 @@ This would cause the program 'proga' to take its input from the file
 
 To find out the status of your jobs, type the command:
 
-```bash
+:::{code} shell-session
 at -l
-```
+:::
 
 This will report both 'batch' and 'at' jobs. If 'N' is the job number
 reported by 'at -l' then the command:
 
-```bash
+:::{code} shell-session
 at -r N
-```
+:::
 
 will remove that job from the queue (whether or not it is already
 running) and interrupt it (if it is already running).

@@ -24,7 +24,7 @@ you type will not be displayed on the screen.
 
 Example where the new password is insufficiently complex:
 
-```bash
+:::{code} shell-session
 $ passwd
 Enter login(LDAP) password:
 New password:
@@ -36,7 +36,7 @@ BAD PASSWORD: The password is shorter than 12 characters
 passwd: Have exhausted maximum number of retries for service
 passwd: password unchanged
 $ 
-```
+:::
 
 Once you set a new password, you must type this password whenever you
 login.

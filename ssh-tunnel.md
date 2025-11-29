@@ -52,9 +52,9 @@ administrative privileges.
 
 Type (on your local machine) in a terminal window:
 
-```bash
+:::{code} shell-session
 ssh -l username -L LISTEN_PORT:eml.berkeley.edu:DESTINATION_PORT EML_HOSTNAME
-```
+:::
 
 where `LISTEN_PORT` is the Listen Port, `DESTINATION_PORT` is the
 Destination Port, and `EML_HOSTNAME` is any EML computer. See our
@@ -62,9 +62,9 @@ Destination Port, and `EML_HOSTNAME` is any EML computer. See our
 
 You may included more than one tunnel on the command-line, for example:
 
-```bash
+:::{code} shell-session
 ssh -l username -L 25:DESTINATION_HOST:25 -L 110:DESTINATION_HOST:110 EML_HOSTNAME
-```
+:::
 
 ### Alternative Ports
 
@@ -79,9 +79,9 @@ in the example below.
 
 Connect to the EML file server from off campus:
 
-```bash
+:::{code} shell-session
 ssh -L 5445:eml.berkeley.edu:445 username@EML_HOSTNAME
-```
+:::
 
 and then connect your SMB client to smb://localhost:5445/homes (or
 \\localhost:5445\homes on Windows).
@@ -90,9 +90,9 @@ and then connect your SMB client to smb://localhost:5445/homes (or
 
 Read JSTOR from off campus:
 
-```bash
+:::{code} shell-session
 ssh -L 8000:www.jstor.org:80 username@EML_HOSTNAME
-```
+:::
 
 and then connect your web browser to http://localhost:8000.
 
@@ -100,9 +100,9 @@ and then connect your web browser to http://localhost:8000.
 
 Connect to an EML server through the VPN:
 
-```bash
+:::{code} shell-session
 ssh -L 53389:localhost:3389 username@EML_HOSTNAME
-```
+:::
 
 and then connect your RDP client (e.g. Microsoft Remote Desktop) to
 localhost:53389.

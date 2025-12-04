@@ -126,11 +126,23 @@ def main():
     print(f"Days until notice: {days_until_notice}")
     print(f"Days until backup: {days_until}")
 
-    # Create the notice when we're within threshold days of the backup
-    # This means we create it on or after the notice date
+    # Create the notice only on or shortly after the notice date
+    # Too early: not yet within threshold
     if days_until > args.threshold and not args.force:
         print(
             f"Not within threshold ({days_until} > {args.threshold}). No action needed."
+        )
+        # Set GitHub Actions output
+        if "GITHUB_OUTPUT" in os.environ:
+            with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+                f.write("created=false\n")
+        sys.exit(0)
+
+    # Too late: we're more than 1 day past the notice date (missed the window)
+    # Allow 1 day grace period for the automation to catch it
+    if days_until_notice < -1 and not args.force:
+        print(
+            f"Past notice date window (notice was {-days_until_notice} days ago). No action needed."
         )
         # Set GitHub Actions output
         if "GITHUB_OUTPUT" in os.environ:

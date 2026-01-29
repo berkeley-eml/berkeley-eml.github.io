@@ -43,8 +43,7 @@ computer and your EML account.
 3.  Enter the username and password
 4.  Click Login
 
-:::note
-
+:::{note}
 The first time you connect to a particular EML system, SSH will ask you if you want to accept a host key. Click 'Yes'.
 :::
 

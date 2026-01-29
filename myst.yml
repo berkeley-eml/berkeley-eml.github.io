@@ -33,9 +33,8 @@ project:
             - file: copyright.md
         - file: homepage.md
         - file: ergonomics.md
-    - title: Remote Access
+    - file: remote.md
       children:
-        - file: monitoring.md
         - file: jupyterhub.md
         - title: Secure Shell
           children:
@@ -67,6 +66,7 @@ project:
         - file: grafana.md
         - file: memory.md
         - file: savio.md
+        - file: monitoring.md
     - title: Data and Storage
       children:
         - file: disk-quota.md

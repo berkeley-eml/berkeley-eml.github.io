@@ -3,3 +3,4 @@ node_modules/
 .myst.json
 *.log
 .DS_Store
+__pycache__/

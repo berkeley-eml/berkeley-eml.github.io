@@ -63,10 +63,9 @@ project:
             - file: compute-servers-policy.md
             - file: background.md
             - file: unix-processes.md
-        - file: grafana.md
+        - file: monitoring.md
         - file: memory.md
         - file: savio.md
-        - file: monitoring.md
     - title: Data and Storage
       children:
         - file: disk-quota.md

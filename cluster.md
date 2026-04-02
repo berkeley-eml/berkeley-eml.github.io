@@ -1,5 +1,5 @@
 ---
-title: Using the SLURM cluster
+title: Using the Slurm Cluster
 ---
 
 

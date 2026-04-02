@@ -10,5 +10,5 @@ account.
 - [General overview](https://grafana.econ.berkeley.edu/d/Zb3CPV-7k/1-overview?orgId=1)
 - [Memory utilization](https://grafana.econ.berkeley.edu/d/s5RT7zynz/2-memory?orgId=1)
 - [CPU load averages](https://grafana.econ.berkeley.edu/d/CvtIw-a7z/3-load-averages?orgId=1)
-- [SLURM activity](https://grafana.econ.berkeley.edu/d/bX7jn6dZk/6-slurm?orgId=1)
+- [Slurm activity](https://grafana.econ.berkeley.edu/d/bX7jn6dZk/6-slurm?orgId=1)
 - [All general dashboards](https://grafana.econ.berkeley.edu/d/Zb3CPV-7k/1-overview?orgId=1&search=open&folder=current&layout=list)

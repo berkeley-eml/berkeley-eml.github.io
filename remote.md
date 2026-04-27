@@ -36,7 +36,7 @@ users can access is listed on our [dashboards](monitoring.md).
 [WinSCP](http://winscp.net/eng/download.php) is a free graphical SFTP
 client that allows you to copy/transfer files between your windows
 computer and your EML account.
-![](images/winscp.jpg"){fig-alt="winscp image" width="200"}
+![](images/winscp.jpg){fig-alt="winscp image" width="200"}
 
 1.  Click on the session category
 2.  Enter the hostname

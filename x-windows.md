@@ -8,7 +8,7 @@ on your home computer. This will enable you to display windows and
 graphics created by applications running on remote UNIX systems.
 
 Note that in many cases you may be better of using the [EML
-JupyterHub](jupyterhub) for browser-based access to RStudio and VS Code,
+JupyterHub](jupyterhub.md) for browser-based access to RStudio and VS Code,
 or [Remote Desktop](#rdp) to run any graphical program in a remote
 desktop window.
 
